@@ -1,0 +1,1 @@
+# For this app to work we need to go to keycloak and add create the auth_demo realm, we need to add the public-client client to it. This client uses the standard flow. Then we need to add a scope (public-client-audience-scope) to that client (optional). This scope has an audience mapper connecting it to the public-client client.  

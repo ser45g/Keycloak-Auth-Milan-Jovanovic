@@ -19,8 +19,8 @@ internal static class ServiceCollectionExtensions
                 {
                     AuthorizationCode = new OpenApiOAuthFlow
                     {
-                        AuthorizationUrl = new Uri(configuration["Keycloak:AuthorizationUrl"]!),
-                        TokenUrl = new Uri(configuration["Keycloak:TokenUrl"]!),
+                        AuthorizationUrl = new Uri(configuration["Authentication:AuthorizationUrl"]!),
+                        TokenUrl = new Uri(configuration["Authentication:TokenUrl"]!),
                         Scopes = new Dictionary<string, string>
                         {
                             { "openid", "openid" },
@@ -34,8 +34,7 @@ internal static class ServiceCollectionExtensions
             o.AddSecurityRequirement(doc => new OpenApiSecurityRequirement
             {
                 {
-                    new OpenApiSecuritySchemeReference("Keycloak", doc),
-                    []
+                    new OpenApiSecuritySchemeReference("Keycloak", doc), []
                 }
             });
         });

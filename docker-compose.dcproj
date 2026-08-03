@@ -16,9 +16,7 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="keycloak\realm-import\realm-export.json" />
     <None Include="Makefile" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="keycloak\" />
   </ItemGroup>
 </Project>
